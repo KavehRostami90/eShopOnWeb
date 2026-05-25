@@ -80,7 +80,7 @@ jobs:
       run: |
         az account set --subscription "${{ env.SUBSCRIPTION-ID }}"
         az group create -n "${{ env.RESOURCE-GROUP }}" -l "${{ env.LOCATION }}"
-        az provider register -n Microsoft.Web --wait
+        #az provider register -n Microsoft.Web --wait
 
     - name: Validate Bicep (prints the real error if any)
       run: |
